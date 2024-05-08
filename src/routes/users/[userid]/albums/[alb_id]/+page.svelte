@@ -2,15 +2,7 @@
     import {getPhotos} from '$lib/index.js'
     let page = 1;
     let isLoading = false
-    let albid;
     export let data
-
-    const addImgs = (imgs) => {
-        imgs.forEach(img => {
-            const photosDiv = document.querySelector("#photos")
-            photosDiv.innerHTML += `<img class="photo" src=${img.url} alt=${img.title}>`
-        })
-    }
 
     const handleScroll = async () => {
     	if (isLoading) return;
